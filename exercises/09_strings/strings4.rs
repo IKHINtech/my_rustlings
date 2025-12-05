@@ -1,5 +1,7 @@
 // Calls of this function should be replaced with calls of `string_slice` or `string`.
-fn placeholder() {}
+fn placeholder<T: std::fmt::Display>(arg: T) {
+    println!("placeholder: {}", arg);
+}
 
 fn string_slice(arg: &str) {
     println!("{arg}");
